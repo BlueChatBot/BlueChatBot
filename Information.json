@@ -1,0 +1,147 @@
+{
+    "General": [
+
+        {
+            "tag": "Greetings",
+            "patterns": ["Hi", "Hey", "How are you", "Is anyone there?", "Hello", "Good day"],
+            "responses": ["Hey :-)", "Hello, thanks for visiting", "Hi there, what can I do for you?", "Hi there, how can I help?"]
+        
+        },
+
+        {
+            "tag": "Goodbyes",
+            "patterns": ["Bye", "See you later", "Goodbye"],
+            "responses": [ "See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."]
+        },
+        
+        {
+            "tag": "Thank you",
+            "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+            "responses": ["Happy to help!", "Any time!", "My pleasure"]
+        },
+
+        {
+            "tag": "funny",
+            "patterns": ["Tell me a joke!", "Tell me something funny!", "Do you know a joke?"],
+            "responses": ["Why did the hipster burn his mouth? He drank the coffee before it was cool.", "What did the buffalo say when his son left for college? Bison." ]
+        }
+     
+    ],
+
+    "Admissions": [
+        {
+        "Requirements and Deadlines": [
+            { 
+                "General Deadlines": [
+
+                    {
+                    "tag": "Early Action",
+                    "patterns": ["When is the deadline for applying?","When is the deadline for early action appl?", "When is the deadline for applying to the program for the next term?" ],
+                    "responses": ["The Deadline for applying is "]
+                    },
+
+                    {
+                    "tag": "Financial Aid",
+                    "patterns": ["When is the deadline for financial aid?", "When is the deadline for applying for financial aid?"],
+                    "responses": ["The deadline for financial aid is "]
+                    },
+
+                    {
+                    "tag": "Regular Application",
+                    "patterns": ["When is the deadline for regular application?", "idk"],
+                    "responses": ["The deadline for regular applications is "]
+                    }
+
+                ],
+
+                "School Specific Requirements": [
+                        
+                    {
+                    "tag": "LSA",
+                    "patterns": ["When is the deadline for applying?","When is the deadline for early action appl?", "When is the deadline for applying to the program for the next term?" ],
+                    "responses": ["The Deadline for applying is "]
+                    },
+    
+                    {
+                    "tag": "Engineering",
+                    "patterns": ["When is the deadline for financial aid?", "When is the deadline for applying for financial aid?"],
+                    "responses": ["The deadline for financial aid is "]
+                    },
+    
+                    {
+                    "tag": "Ross",
+                    "patterns": ["When is the deadline for regular application?", "idk"],
+                    "responses": ["The deadline for financial aid is "]
+                    },
+
+                    {
+                    "tag": "Ross",
+                    "patterns": ["When is the deadline for regular application?", "idk"],
+                    "responses": ["The deadline for financial aid is "]
+                    },
+
+                    {
+                    "tag": "School of Music, Theatre, and Dance",
+                    "patterns": ["When is the deadline for regular application?", "idk"],
+                    "responses": ["The deadline for financial aid is "]
+                    },
+
+                    {
+                    "tag": "School of Kinesiology",
+                    "patterns": ["When is the deadline for regular application?", "idk"],
+                    "responses": ["The deadline for financial aid is "]
+                    },
+
+                    {
+                    "tag": "School of Nursing",
+                    "patterns": ["When is the deadline for regular application?", "idk"],
+                    "responses": ["The deadline for financial aid is "]
+                    },
+
+                    {
+                    "tag": "Stamps School of Art and Design",
+                    "patterns": ["When is the deadline for regular application?", "idk"],
+                    "responses": ["The deadline for financial aid is "]
+                    },
+                    
+                    {
+                    "tag": "Taubman College of Architecture and Urban Planning",
+                    "patterns": ["When is the deadline for regular application?", "idk"],
+                    "responses": ["The deadline for financial aid is "]
+                    }
+        
+                ],
+
+                "Essay Questions": [
+
+                    {
+                    "tag": "Essay Prompts",
+                    "patterns": ["What are the essay prompts?"],
+                    "responses": 
+                    ["Prompt 1: Everyone belongs to many different communities and/or groups defined by (among other things) shared geography, religion, ethnicity, income, cuisine, interest, race, ideology, or intellectual heritage. Choose one of the communities to which you belong, and describe that community and your place within it. (Required for all applicants) Prompt 2: Describe the unique qualities that attract you to the specific undergraduate College or School (including preferred admission and dual degree programs) to which you are applying at the University of Michigan. How would that curriculum support your interests? (Required for all applicants)"]
+                    }
+                ],
+
+                "Selection": [
+                        
+                    {
+                    "tag": "Acceptance Rate",
+                    "patterns": ["What is the acceptance rate?"],
+                    "responses": ["Last year, 16,235 applicants were offered admission from a pool of 83,029. Yielding an acceptance rate of 18.2%"]
+                    },
+
+                    {
+                    "tag": "Average stats",
+                    "patterns": ["What was last year's average ACT Score?"],
+                    "responses": ["The average ACT score for last year was 34"]
+                    }
+
+                ]
+            }
+        ]}
+    ]
+
+
+
+
+}
