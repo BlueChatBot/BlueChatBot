@@ -18,8 +18,9 @@ for info in information['General']:
         wordTag.append((placeholder, tag)) 
 
 ignorePunc = ["'", '"', '.', '?', '!', ':', ';', ',']
+all_words = [lowerStem(word) for word in totalWords if word not in ignorePunc]
+print(all_words)
 
-print(wordTag) 
 # Test 1: Tokenize
 string = "Oscar and Areeb are friends"
 print(string)
