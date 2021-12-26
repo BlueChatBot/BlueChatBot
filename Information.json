@@ -5,7 +5,6 @@
             "tag": "Greetings",
             "patterns": ["Hi", "Hey", "How are you", "Is anyone there?", "Hello", "Good day", "What's up", "yo"],
             "responses": ["Hey :-)", "Hello, thanks for visiting", "Hi there, what can I do for you?", "Hi there, how can I help?"]
-        
         },
 
         {
@@ -42,12 +41,13 @@
 
                     {
                     "tag": "Financial Aid",
-                    "patterns": ["When is the deadline for financial aid?", "When is the deadline for applying for financial aid?"],
+                    "patterns": ["When is the deadline for financial aid?", "When should I apply for financial aid ?", "Can I / am I eligible / am I allowed to apply for financial aid ?"],
                     "responses": ["Which term are you applying for?", "The deadline for financial aid for entering fall/winter term is March 31.", 
                         "The deadline for financial aid for entering winter term is Oct 1", 
                         "The deadline for financial aid for entering spring term is May 10",
                         "The deadline for financial aid for entering summer term is June 1", 
-                        "Check out the webpage for financial aid deadlines: https://finaid.umich.edu/apply-aid/new-undergraduates/deadlines"
+                        "Check out the webpage for financial aid deadlines: https://finaid.umich.edu/apply-aid/new-undergraduates/deadlines", 
+                        "Refer to this site for financial aid eligibility information: https://finaid.umich.edu/getting-started/qualifying-aid"
                     ]
                     },
 
@@ -91,21 +91,22 @@
                     {
                     "tag": "Engineering",
                     "patterns": ["Are there specific requirements for applying to the college of engineering/COE/coe?", 
-                    ""],
+                    "Do I need a portfolio to apply to the College of Engineering / COE", "Do I need programming experience to apply to the COE / College of Engineering ?"],
                     "responses": ["There will be specific emphasis placed on achievement in math and science courses.", 
-                    "The application consists of the standard application materials", "No additional materials are needed for the college", 
+                    "The application consists of only the university-wide standard application materials", "No additional materials are needed for the college", 
                     "Check out the college of engineering site: https://www.engin.umich.edu/admissions-aid/undergraduate/apply/"]
                     },
     
                     {
                     "tag": "Ross",
                     "patterns": ["How do I apply to the Ross Bachelor of Business Administration / BBA program?", "Are there specific requirements for applying to Ross/Ross School of Business/Stephen Ross School of Business?", 
-                        "Do I need to complete a portfolio for Ross BBA / Bachelor of Business Administration ?"
+                        "Do I need to complete a portfolio for Ross BBA / Bachelor of Business Administration ?", "Can I apply after being admitted to Michigan / the university ?"
                       ],
                     "responses": [
-                        "Ross applicants ",
-                        "Ross applicants must complete the Ross admissions portfolio consisting of two components: 1) business case discussion 2) artifact & description. Check out this site for details: https://michiganross.umich.edu/undergraduate/bba/admissions/first-year-applicants/admissions-portfolio", 
-                    "Check out the following link: https://michiganross.umich.edu/undergraduate/bba/admissions/first-year-applicants"
+                        "Are you a high school senior or current UM student?",
+                        "First year Ross applicants must complete the Ross admissions portfolio consisting of two components: 1) business case discussion 2) artifact & description. Check out this site for details: https://michiganross.umich.edu/undergraduate/bba/admissions/first-year-applicants/admissions-portfolio", 
+                        "Check out the following link: https://michiganross.umich.edu/undergraduate/bba/admissions/first-year-applicants", 
+                        "Admitted students who attend Michigan can apply to the Ross school as a UM Transfer Applicant. Refer here for details: https://michiganross.umich.edu/undergraduate/bba/admissions/UM-applicants"
                     ]
                     },
 
@@ -173,10 +174,14 @@
                     
                     {
                     "tag": "Taubman College of Architecture and Urban Planning",
-                    "patterns": ["Are there specific requirements for applying to the Taubman College of Architecture and Urban Planning?"],
+                    "patterns": ["Are there specific requirements for applying to the Taubman College of Architecture and Urban Planning ?", 
+                        "Do I need a portfolio to apply ?", "Do I need a portfolio for the Bachelor of Science in Urban Technology / BS in UT ?", 
+                    "Do I need a portfolio to apply / do architecture ? "],
                     "responses": ["Which program are you applying to?",
-                    "The college requires a portfolio that is submitted through Slideroom. For more information please refer to the content under 'SUBMITTING YOUR PORTFOLIO' on this page: https://taubmancollege.umich.edu/architecture/admissions/apply/bachelor-science-first-year"]
-                    }
+                    "The Architecture program requires a portfolio that is submitted through Slideroom. For more information please refer to the content under 'SUBMITTING YOUR PORTFOLIO' on this page: https://taubmancollege.umich.edu/architecture/admissions/apply/bachelor-science-first-year",
+                    "The Urban Technology program does NOT require a portfolio. Learn more here: https://taubmancollege.umich.edu/urbanplanning/admissions/apply/bachelor-science-urban-technology"
+                ]  
+                }
                 ],
 
                 "General Essay Questions": [
@@ -199,10 +204,10 @@
 
                     {
                     "tag": "Average stats",
-                    "patterns": ["What was last year's average ACT Score?"],
-                    "responses": ["The average ACT score for last year was 34"]
+                    "patterns": ["What was last year's average ACT Score ?", "What was last year's average SAT Score ?"],
+                    "responses": ["The average ACT score for last year was 34",  
+                    "The average SAT score is 1435."]
                     }
-
                 ]
             }
         ]}
