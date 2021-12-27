@@ -5,6 +5,9 @@ import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader, dataloader
 from model import NeuralNetwork
+from torch.optim import SGD
+DEBUG = 0; 
+import numpy as np
 
 # open information file and load content
 with open ('Information.json', 'r') as f:
@@ -72,9 +75,11 @@ class chatData(Dataset): # inherit from class Dataset
         return self.number_samples
 
 # set size and sample of data
-batch_size = 8 
+batch_size = 8
 hidden_size = 8
+
 output_size = len(tags)
+if DEBUG: print("OUTPUT SIZE: ", output_size)
 input_size = len(bag_training[0])
 learningRate = 0.001
 num_epochs = 1000
@@ -85,32 +90,36 @@ load_trainer = DataLoader(dataset = dataset, batch_size=batch_size, shuffle=True
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-# define model 
-
+# define model (class defined in model.py)
 model = NeuralNetwork(input_size, hidden_size, output_size).to(device)
 
 # loss optimizer
-criteria = nn.CrossEntropyLoss
+criteria = nn.CrossEntropyLoss()
+# optimization function
 optimizer = torch.optim.Adam(model.parameters(), lr = learningRate)
+#optimizer = SGD(model.parameters(), lr=0.01, momentum=0.9)
+
 
 for epoch in range(num_epochs):
     for (words, labels) in load_trainer:
-        
-        words = words.to(device, dtype=torch.int64)
+        if DEBUG: print(words)
+        words = words.to(device, dtype=torch.float32)
         labels = labels.to(device, dtype=torch.int64)
         
+        # clear the gradients
+        optimizer.zero_grad()
         # forward pass
+        # make prediction
         outputs = model(words)
+        # calculate loss
         loss = criteria(outputs, labels)
         
         # backward pass
-        optimizer.zero_grad()
         loss.backward()
         optimizer.step()
         
     if (epoch+1) % 100 == 0:
         print (f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}')
-
 
 data = {
 "model_state": model.state_dict(),
