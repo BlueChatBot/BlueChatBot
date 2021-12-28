@@ -23,8 +23,35 @@
             "tag": "funny",
             "patterns": ["Tell me a joke!", "Tell me something funny!", "Do you know a joke?"],
             "responses": ["Why did the hipster burn his mouth? He drank the coffee before it was cool.", "What did the buffalo say when his son left for college? Bison." ]
+        },
+
+        {
+            "tag": "Early Action",
+            "patterns": ["When is the deadline for applying?","When is the deadline for early action application?", "When is the deadline for applying to the program for the next term?" ],
+            "responses": ["The deadline for applying to early action is November 1."]        },
+
+        {
+            "tag": "Financial Aid",
+                    "patterns": ["When is the deadline for financial aid?", "When should I apply for financial aid ?", "Can I / am I eligible / am I allowed to apply for financial aid ?"],
+                    "responses": ["Which term are you applying for?", "The deadline for financial aid for entering fall/winter term is March 31.", 
+                        "The deadline for financial aid for entering winter term is Oct 1", 
+                        "The deadline for financial aid for entering spring term is May 10",
+                        "The deadline for financial aid for entering summer term is June 1", 
+                        "Check out the webpage for financial aid deadlines: https://finaid.umich.edu/apply-aid/new-undergraduates/deadlines", 
+                        "Refer to this site for financial aid eligibility information: https://finaid.umich.edu/getting-started/qualifying-aid"
+                    ]
+        },
+
+        {
+            "tag": "Regular Application",
+            "patterns": ["When is the deadline for regular application?", "When is the deadline for RD?", "When is the latest I can apply to Michigan?", 
+                "I can't meet the EA/Early Action deadline, what can I do?", "When is the deadline for regular decision?"],
+            "responses": ["Which school within Michigan are you applying to?", 
+                "The deadline for regular action/decision for all schools excluding the school of Music, Theatre and Dance is February 1",
+                "The deadline for applying regular action/decision to the school of Music, Theatre and Dance is December 1", 
+                "Feel free to refer to the following site: https://admissions.umich.edu/apply/first-year-applicants/requirements-deadlines/application-changes"
+                ]
         }
-     
     ],
 
     "Admissions": [

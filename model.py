@@ -12,11 +12,11 @@ class NeuralNetwork(nn.Module):
         self.l3 = Linear(hidden_size, num_classes)
         self.relu = ReLU()  
     # forward propagation input
-    def forward(self, x):
-        out = self.l1(x)
+    def forward(self, BagOfWordsX):
+        out = self.l1(BagOfWordsX)
         out = self.relu(out)
         out = self.l2(out)
         out = self.relu(out)
         out = self.l3(out)
-        # no activation and no softmax at the end
+        # no activation and no softmaBagOf at the end
         return out
