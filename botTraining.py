@@ -99,7 +99,6 @@ criteria = nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr = learningRate)
 #optimizer = SGD(model.parameters(), lr=0.01, momentum=0.9)
 
-
 for epoch in range(num_epochs):
     for (words, labels) in load_trainer:
         if DEBUG: print(words)

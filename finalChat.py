@@ -52,4 +52,4 @@ while True:
             if tag == query["tag"]:
                 print(f"{chatBotName}: {random.choice(query['responses'])}")
     else:
-        print(f"{chatBotName}: I do not understnand your question, can you please rephrase it?")
+        print(f"{chatBotName}: I do not understand your question, can you please rephrase it?")
