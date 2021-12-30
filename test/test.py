@@ -1,4 +1,4 @@
-from utilization import tokenize, lowerStem, bagOfWords
+from generalBot.utilization import tokenize, lowerStem, bagOfWords
 import json 
 import numpy as np
 

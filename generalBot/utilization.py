@@ -1,4 +1,4 @@
-import nltk
+# import nltk
 # nltk.download('punkt')
 import re
 import json
@@ -14,7 +14,7 @@ mainStem = PorterStemmer()
 
 # Step 1: Read in the data//tokenize
 def tokenize(input_sentence): 
-    return nltk.word_tokenize(input_sentence)
+    return word_tokenize(input_sentence)
     
 # Step 2: Lowercase + stem words
 def lowerStem(word):

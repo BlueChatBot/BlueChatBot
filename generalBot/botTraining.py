@@ -10,7 +10,7 @@ DEBUG = 0;
 import numpy as np
 
 # open information file and load content
-with open('information/Information.json', 'r') as f:
+with open('Information.json', 'r') as f:
    information = json.load(f)
    
 # create lists for words, tags, and word with tag 
