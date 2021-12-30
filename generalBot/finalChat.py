@@ -62,6 +62,9 @@ while True:
             # select response corresponding to found tag
             if tag == query["tag"]:
                 print(f"{chatBotName}: {random.choice(query['responses'])}")
+                if tag == "Goodbyes":
+                    exit()
+            
     # not over 70% confidence, reprompt
     else:
         print(f"{chatBotName}: I do not understand your question, can you please rephrase it?")
