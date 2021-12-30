@@ -11,7 +11,7 @@ import random
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-with open ('Information.json', 'r') as f:
+with open ('information/Information.json', 'r') as f:
     information = json.load(f)
 
 File = "data.pth"
