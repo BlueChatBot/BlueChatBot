@@ -6,7 +6,7 @@ import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader, dataloader
 from model import NeuralNetwork
 from torch.optim import SGD
-DEBUG = 0; 
+DEBUG = 0
 import numpy as np
 
 # open information file and load content
@@ -14,7 +14,7 @@ with open('Information.json', 'r') as f:
    information = json.load(f)
    
 # create lists for words, tags, and word with tag 
-totalWords = [] # list consisting of individual words 
+totalWords = [] # list consisting of all individual words 
 tags = [] # list containing tags 
 wordTag = [] # list containing tupple of words with their tag
  
@@ -30,7 +30,7 @@ for info in information['General']:
         token = tokenize(pattern)  
         # add words into total words
         totalWords.extend(token) 
-        # add tupple consisting of each word and its tag into word tag list 
+        # add tupple consisting of each tokenized sentence and its tag into word tag list 
         wordTag.append((token, tag)) 
 
 # list of punctuations to ignore
@@ -57,7 +57,11 @@ for pattern_sentence, tag in wordTag:
     tag_label = tags.index(tag)
     tag_training.append(tag_label)
 
-# convert both into arrays (NEEDED?)
+# intuition: 
+# bag_training: [[0, 1, 1, 0], [1,1,1,1], etc]
+# tag_training: [1, 2, 4, 3, 5, etc]
+
+# convert both into arrays 
 bag_training = np.array(bag_training)
 tag_training = np.array(tag_training)
 
@@ -74,23 +78,26 @@ class chatData(Dataset): # inherit from class Dataset
     def __len__(self):
         return self.number_samples
 
-# set size and sample of data
+# number of samples (i.e. rows) to process before updating model
 batch_size = 8
 hidden_size = 8
-
+# number of y values 
 output_size = len(tags)
+
 if DEBUG: print("OUTPUT SIZE: ", output_size)
+# number of bag of words
 input_size = len(bag_training[0])
+# amount to change model in response to an error estimation
 learningRate = 0.001
+# number of times the entire dataset is processed
 num_epochs = 1000
 
 # loading data 
 dataset = chatData()
 load_trainer = DataLoader(dataset = dataset, batch_size=batch_size, shuffle=True, num_workers=0)
-
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-# define model (class defined in model.py)
+# define and configure model (class defined in model.py)
 model = NeuralNetwork(input_size, hidden_size, output_size).to(device)
 
 # loss optimizer
@@ -99,9 +106,12 @@ criteria = nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr = learningRate)
 #optimizer = SGD(model.parameters(), lr=0.01, momentum=0.9)
 
+# iterate through number of epochs
 for epoch in range(num_epochs):
+    # go through each word and label
     for (words, labels) in load_trainer:
         if DEBUG: print(words)
+        # convert words and labels to appropriate data types
         words = words.to(device, dtype=torch.float32)
         labels = labels.to(device, dtype=torch.int64)
         
@@ -110,16 +120,18 @@ for epoch in range(num_epochs):
         # forward pass
         # make prediction
         outputs = model(words)
-        # calculate loss
+        # calculate loss by comparing output and actual labels
         loss = criteria(outputs, labels)
         
-        # backward pass
+        # backward pass 
         loss.backward()
+        # optimize model by making adjustments
         optimizer.step()
-        
+    
     if (epoch+1) % 100 == 0:
         print (f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}')
 
+# save data into file
 data = {
 "model_state": model.state_dict(),
 "input_size": input_size,

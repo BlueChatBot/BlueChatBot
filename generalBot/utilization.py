@@ -7,12 +7,12 @@ import numpy as np
 
 # from from nltk.stem.porter import 
 from nltk.tokenize import word_tokenize
-from nltk.corpus import stopwords
+# from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 mainStem = PorterStemmer()
 # stop_words = set(stopwords.words("english"))
 
-# Step 1: Read in the data//tokenize
+# Step 1: tokenize (break into individual words)
 def tokenize(input_sentence): 
     return word_tokenize(input_sentence)
     
