@@ -12,8 +12,8 @@
             "patterns": ["Bye", "See you later", "Goodbye"],
             "responses": [ "See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."]
         },
-        
-        {
+       
+        { 
             "tag": "Thank you",
             "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
             "responses": ["Happy to help!", "Any time!", "My pleasure"]

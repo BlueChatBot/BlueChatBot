@@ -34,12 +34,13 @@ model.eval()
 chatBotName = "Blue ChatBot"
 print(f"Welcome to {chatBotName}! Feel free to ask any question about the University of Michigan and I will try to answer it. Type 'all done' to exit!")
 
-while True: 
-    sentence = input('You: ')
-    if sentence == "all done":
-        break 
+def chat(sentence):
+    # while True: 
+      #  sentence = input('You: ')
+       # if sentence == "all done":
+        #    break 
 
-    # process sentence
+     # process sentence
     sentence = tokenize(sentence)
     # create bag of words
     BagOfWordsX = bagOfWords(sentence, all_words)
@@ -61,10 +62,10 @@ while True:
         for query in information["General"]:
             # select response corresponding to found tag
             if tag == query["tag"]:
-                print(f"{chatBotName}: {random.choice(query['responses'])}")
-                if tag == "Goodbyes":
-                    exit()
+                return(f"{chatBotName}: {random.choice(query['responses'])}")
+                # if tag == "Goodbyes":
+                # exit()
             
     # not over 70% confidence, reprompt
     else:
-        print(f"{chatBotName}: I do not understand your question, can you please rephrase it?")
+        return(f"{chatBotName}: I do not understand your question, can you please rephrase it?")

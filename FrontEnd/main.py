@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
-from FrontEnd/finalChat import chat
+from BotLogic.finalChat import chat
 
 app = Flask(__name__, template_folder="Template")
 
