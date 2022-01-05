@@ -4,6 +4,7 @@ import re
 import json
 import pickle
 import numpy as np
+import nltk
 
 # from from nltk.stem.porter import 
 from nltk.tokenize import word_tokenize

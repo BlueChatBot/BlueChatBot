@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
-from BotLogic.finalChat import chat
+import sys
+sys.path.append('/Users/oscarsong/Desktop/BlueChatBot/BotLogic')
+from finalChat import chat
 
 app = Flask(__name__, template_folder="Template")
 
