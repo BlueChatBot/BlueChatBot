@@ -9,9 +9,6 @@ from torch.optim import SGD
 DEBUG = 0
 import numpy as np
 
-import sys
-sys.path.append('/Users/oscarsong/Desktop/BlueChatBot/FrontEnd')
-
 # open information file and load content
 with open('Information.json', 'r') as f:
    information = json.load(f)
