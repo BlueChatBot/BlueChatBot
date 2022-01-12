@@ -10,7 +10,6 @@ class InteractiveChatbox {
 
     display() {
         const {button, chatbox} = this.args;
-        
         button.addEventListener('click', () => this.toggleState(chatbox))
     }
 

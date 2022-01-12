@@ -32,7 +32,7 @@ model.load_state_dict(model_state)
 model.eval()
 
 chatBotName = "Blue ChatBot"
-print(f"Welcome to {chatBotName}! Feel free to ask any question about the University of Michigan and I will try to answer it. Type 'all done' to exit!")
+# print(f"Welcome to {chatBotName}! Feel free to ask any question about the University of Michigan and I will try to answer it. Type 'all done' to exit!")
 
 def chat(sentence):
     # while True: 

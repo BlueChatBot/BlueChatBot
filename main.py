@@ -3,7 +3,8 @@ from flask import Flask, render_template, request, redirect, url_for, jsonify
 # sys.path.append('/Users/oscarsong/Desktop/BlueChatBot/BotLogic')
 from finalChat import chat
 
-app = Flask(__name__, template_folder="FrontEnd/Template/index.html")
+
+app = Flask(__name__, template_folder='static/Templates')
 
 # This is the get request when the user inputs information
 @app.route('/')
