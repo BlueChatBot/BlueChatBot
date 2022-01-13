@@ -8,7 +8,7 @@ app = Flask(__name__, template_folder='static/Templates')
 CORS(app)
 
 # This is the get request when the user inputs information
-@app.get('/')
+@app.get('https://blue-chatbot.herokuapp.com/')
 def index():
     return render_template('index.html')
 
