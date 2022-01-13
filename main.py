@@ -8,12 +8,12 @@ app = Flask(__name__, template_folder='static/Templates')
 CORS(app)
 
 # This is the get request when the user inputs information
-@app.get('https://blue-chatbot.herokuapp.com/')
+@app.route('/', methods=['GET'])
 def index():
     return render_template('index.html')
 
 # This is the post request when the user clicks the chat button
-@app.post('https://blue-chatbot.herokuapp.com/predict')
+@app.route('/post', methods=['POST'])
 def post_bot_response():
     sentence = request.get_json().get("message")
     response = chat(sentence)
