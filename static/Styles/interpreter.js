@@ -45,7 +45,7 @@ class BlueChatBot {
         this.textMessage.push(msg1);
         // fetch from database
         // MODIFIED FOR HEROKU
-        fetch('https://blue-chatbot.herokuapp.com/post', {
+        fetch('https://blue-chatbot.herokuapp.com/', {
             method: 'POST',
             body: JSON.stringify({ message: message1 }),
             mode: 'cors',
