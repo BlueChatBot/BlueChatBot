@@ -90,7 +90,7 @@ input_size = len(bag_training[0])
 # amount to change model in response to an error estimation
 learningRate = 0.001
 # number of times the entire dataset is processed
-num_epochs = 1000
+num_epochs = 2000
 
 # loading data 
 dataset = chatData()
