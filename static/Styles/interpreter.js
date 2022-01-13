@@ -84,6 +84,5 @@ class BlueChatBot {
     }
 }
 
-export {BlueChatBot}; 
-// const chatbox = new BlueChatBot();
-// chatbox.display();
+const chatbox = new BlueChatBot();
+chatbox.display();
