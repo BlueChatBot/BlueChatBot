@@ -44,7 +44,7 @@ class BlueChatBot {
         let msg1 = { name: "User", message: message1 }
         this.textMessage.push(msg1);
         // fetch from database
-        fetch('http://127.0.0.1:5000/predict', {
+        fetch('https://blue-chatbot.herokuapp.com/predict', {
             method: 'POST',
             body: JSON.stringify({ message: message1 }),
             mode: 'cors',
