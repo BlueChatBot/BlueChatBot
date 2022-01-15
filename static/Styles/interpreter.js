@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 class BlueChatBot {
     constructor() {
         this.dynamic = {
@@ -9,7 +11,6 @@ class BlueChatBot {
         this.textMessage = []; 
     }
 
-    
     display() { 
         const {startChat, responseOnscreen, sendMsg} = this.dynamic;
        
@@ -45,7 +46,15 @@ class BlueChatBot {
         this.textMessage.push(msg1);
         // fetch from database
         // MODIFIED FOR HEROKU
-        fetch('/post/', {
+        // fetch('', {
+        //     method: 'POST',
+        //     body: JSON.stringify({ message: message1 }),
+        //     mode: 'cors',
+        //     headers: {
+        //       'Content-Type': 'application/json'
+        //     },
+        //   })
+        axios.post('https://blue-chatbot.herokuapp.com/post/', {
             method: 'POST',
             body: JSON.stringify({ message: message1 }),
             mode: 'cors',
