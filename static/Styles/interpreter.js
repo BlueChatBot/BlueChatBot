@@ -46,7 +46,8 @@ class BlueChatBot {
         // MODIFIED FOR HEROKU
         fetch('https://blue-chatbot.herokuapp.com/getmsg', {
             method: 'POST',
-            body: JSON.stringify({ message: message1 }),
+            // body: JSON.stringify({ message: message1 }),
+            body: JSON.stringify(msg1),
             mode: 'cors',
             headers: {
               'Content-Type': 'application/json'
