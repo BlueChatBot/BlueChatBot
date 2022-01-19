@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, jsonify
+from flask import Flask, render_template, request, redirect, url_for, jsonify, 
 # import sys
 # sys.path.append('/Users/oscarsong/Desktop/BlueChatBot/BotLogic')
 from finalChat import chat
@@ -13,7 +13,7 @@ def index():
     return render_template('index.html')
 
 # This is the post request when the user clicks the chat button
-@app.route('/post/', methods=['POST'])
+@app.route('/getmsg', methods=['POST'])
 def post_bot_response():
     sentence = request.get_json().get("message")
     response = chat(sentence)
