@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, jsonify, 
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 # import sys
 # sys.path.append('/Users/oscarsong/Desktop/BlueChatBot/BotLogic')
 from finalChat import chat
