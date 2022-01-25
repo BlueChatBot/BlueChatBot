@@ -62,7 +62,7 @@ def chat(sentence):
         for query in information["General"]:
             # select response corresponding to found tag
             if tag == query["tag"]:
-                return(f"{chatBotName}: {random.choice(query['responses'])}")
+                return(f"{random.choice(query['responses'])}")
                 # if tag == "Goodbyes":
                 # exit()
             

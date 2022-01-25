@@ -80,6 +80,7 @@ body {
     background: #E0E0E0; 
     padding: 8px 12px;
     max-width: 70%;
+    font-size: 90%;
 }
 
 .messages__item--visitor,
@@ -94,7 +95,7 @@ body {
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
     background: var(--primary);
-    color: white;
+    color: rgb(51, 46, 46);
 }
 
 /* FOOTER */
@@ -193,9 +194,8 @@ body {
 }
 
 .messages__item {
-    background: rgb(100, 182, 206);
     max-width: 60.6%;
-    width: fit-content;
+    height: fit-content;
 }
 
 .messages__item--operator {
@@ -204,6 +204,7 @@ body {
 
 .messages__item--visitor {
     margin-right: auto;
+    width: fit-content;
 }
 
 /* FOOTER */
@@ -230,9 +231,11 @@ body {
 }
 
 .messages__item {
-    background: orange;
+    overflow-wrap: break-word;
+    background: rgb(217, 217, 243);
     max-width: 60.6%;
     width: fit-content;
+    
 }
 
 .messages__item--operator {
