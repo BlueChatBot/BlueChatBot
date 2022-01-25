@@ -68,20 +68,20 @@ class BlueChatBot {
     }
     
     updateChatText(chatbox) {
-        var html = '';
+        var text = '';
         this.textMessage.slice().reverse().forEach(function(item, index) {
             if (item.name === "BlueChatBot")
             {
-                html += '<div class="messages__item messages__item--visitor">' + item.message + '</div>'
+                text += '<div class="messages__item messages__item--visitor">' + item.message + '</div>'
             }
             else
             {
-                html += '<div class="messages__item messages__item--operator">' + item.message + '</div>'
+                text += '<div class="messages__item messages__item--operator">' + item.message + '</div>'
             }
           });
 
         const chatmessage = chatbox.querySelector('.chatbox__messages');
-        chatmessage.innerHTML = html;
+        chatmessage.innerHTML = text;
     }
 }
 
