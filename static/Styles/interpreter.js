@@ -23,7 +23,6 @@ class BlueChatBot {
         })
     }
 
-    
     toggleState(chatbox) {
         this.state = !this.state;
 
